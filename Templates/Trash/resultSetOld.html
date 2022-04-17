@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.column {
+  float: left;
+  width:20%;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1180px) {
+  .column {
+    width: 100%;
+  }
+}
+.center {
+  position: absolute;
+  
+  left: 4%;
+  
+}
+
+
+
+
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #4285f4 !important;
+}
+
+.hide{
+  display:none;  
+}
+
+.wrapper{
+  background: #f6f6f6;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+
+  
+  margin: 85px auto 0;
+}
+</style>
+
+<!-- Custom font-->
+<link rel="stylesheet" href="fonts/stylesheet.e9dc714d.css">
+<!-- Swiper-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/swiper/swiper-bundle.min.css">
+<!-- AOS - AnimationOnScroll-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/aos/aos.css">
+<!-- Custom Scrollbar-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+<!-- Theme stylesheet-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/style.default.7d4baeb2.css" id="theme-stylesheet">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/custom.0a822280.css">
+<!-- Favicon-->
+<link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/img/favicon.png">
+<!-- FontAwesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+<!-- Iconscout Link For Icons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <!-- navbar-->
+    <header class="header header-absolute"> 
+    
+        <!-- Top Bar End-->
+        <nav class="navbar navbar-expand-lg bg-transparent border-0 shadow-0 navbar-light px-lg-5 "><a class="navbar-brand" href="index.html"></a>
+          
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="svg-icon navbar-icon">
+              <use xlink:href="#menu-hamburger-1"> </use>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mt-3 mt-lg-0">
+              <a class="nav-link dropdown-toggle" id="homeDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                
+              
+              <a class="nav-link dropdown-toggle" id="shopDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Additional Info</a>
+            
+            </ul>
+            
+          </div>
+        </nav>
+      </header>
+      <br><br>
+
+      
+
+      <div class="column">
+        <div class="wrapper">
+
+
+            <h4 id="comboname1">Combo1</h4>
+            <!--display outfit images-->
+            
+            <div id="displayTop1"></div>
+            <div id="displayBottom1"></div>
+            <div id="displayFoot1"></div>
+            
+            <br>
+            <form formaction="http://127.0.0.1:5000/rate" method="post">
+              <input  value="xyz" type="hidden" name="combo1">
+              <button onclick="test()" type="submit" class="btn btn-dark">Rate Outfit</button>
+            </form>
+            </div>
+
+        </div>
+
+      </div>
+      <div class="column">
+        <div class="wrapper">
+            <h4 id="comboname2">Combo2</h4>
+            <!--display outfit images-->
+            <div id="displayTop2"></div>
+            <div id="displayBottom2"></div>
+            <div id="displayFoot2"></div>
+            
+            <br>
+            <form formaction="http://127.0.0.1:5000/rate" method="post">
+              <input   type="hidden" name="combo2">
+              <button type="submit" class="btn btn-dark">Rate Outfit</button>
+            </form>
+        </div>
+
+      </div>
+      <div class="column">
+        <div class="wrapper">
+            <h4 id="comboname3">Combo3</h4>
+            <!--display outfit images-->
+            <div id="displayTop3"></div>
+            <div id="displayBottom3"></div>
+            <div id="displayFoot3"></div>
+            
+            <br>
+            <form formaction="http://127.0.0.1:5000/rate" method="post">
+              <input  type="hidden"  name="combo3">
+              <button type="submit" class="btn btn-dark">Rate Outfit</button>
+            </form>
+        </div>
+
+      </div>
+      <div class="column">
+        <div class="wrapper">
+            <h4 id="comboname4">Combo4</h4>
+            <!--display outfit images-->
+            <div id="displayTop4"></div>
+            <div id="displayBottom4"></div>
+            <div id="displayFoot4"></div>
+
+            <br>
+             <form formaction="http://127.0.0.1:5000/rate" method="post">
+              <input  type="hidden" name="combo4">
+              <button type="submit" class="btn btn-dark">Rate Outfit</button>
+             </form>
+        </div>
+
+      </div>
+      <div class="column">
+        <div class="wrapper">
+            <h4 id="comboname5">Combo5</h4>
+            <!--display outfit images-->
+            <div id="displayTop5"></div>
+            <div id="displayBottom5"></div>
+            <div id="displayFoot5"></div>
+ 
+            <br>
+            <form formaction="http://127.0.0.1:5000/rate" method="post">
+              <input  type="hidden"name="combo5">
+              <button formaction="http://127.0.0.1:5000/rate" type="submit" class="btn btn-dark">Rate Outfit</button>
+            </form>
+        </div>
+
+      </div>
+
+      <div class="hide">
+        
+        <h3 id="top1">{{top[0]}}</h3>
+        <h3 id="top2">{{top[1]}}</h3>
+        <h3 id="top3">{{top[2]}}</h3>
+        <h3 id="top4">{{top[3]}}</h3>
+        <h3 id="top5">{{top[4]}}</h3>
+
+        <h3 id="bot1">{{bottom[0]}}</h3>
+        <h3 id="bot2">{{bottom[1]}}</h3>
+        <h3 id="bot3">{{bottom[2]}}</h3>
+        <h3 id="bot4">{{bottom[3]}}</h3>
+        <h3 id="bot5">{{bottom[4]}}</h3>
+
+        <h3 id="foot1">{{foot[0]}}</h3>
+        <h3 id="foot2">{{foot[1]}}</h3>
+        <h3 id="foot3">{{foot[2]}}</h3>
+        <h3 id="foot4">{{foot[3]}}</h3>
+        <h3 id="foot5">{{foot[4]}}</h3>
+
+        <h3 id="topName1">{{topName[0]}}</h3>
+        <h3 id="topName2">{{topName[1]}}</h3>
+        <h3 id="topName3">{{topName[2]}}</h3>
+        <h3 id="topName4">{{topName[3]}}</h3>
+        <h3 id="topName5">{{topName[4]}}</h3>
+
+        <h3 id="botName1">{{bottomName[0]}}</h3>
+        <h3 id="botName2">{{bottomName[1]}}</h3>
+        <h3 id="botName3">{{bottomName[2]}}</h3>
+        <h3 id="botName4">{{bottomName[3]}}</h3>
+        <h3 id="botName5">{{bottomName[4]}}</h3>
+
+        <h3 id="footName1">{{footName[0]}}</h3>
+        <h3 id="footName2">{{footName[1]}}</h3>
+        <h3 id="footName3">{{footName[2]}}</h3>
+        <h3 id="footName4">{{footName[3]}}</h3>
+        <h3 id="footName5">{{footName[4]}}</h3>
+        
+      </div>
+      
+    
+       
+      
+        
+  <script>
+    
+
+
+    //display outfit images
+
+    var top1Path = "static/" + document.getElementById("top1").innerText + ".jpg";
+    var top2Path = "static/" + document.getElementById("top2").innerText + ".jpg";
+    var top3Path = "static/" + document.getElementById("top3").innerText + ".jpg";
+    var top4Path = "static/" + document.getElementById("top4").innerText + ".jpg";
+    var top5Path = "static/" + document.getElementById("top5").innerText + ".jpg";
+    var bot1Path = "static/" + document.getElementById("bot1").innerText + ".jpg";
+    var bot2Path = "static/" + document.getElementById("bot2").innerText + ".jpg";
+    var bot3Path = "static/" + document.getElementById("bot3").innerText + ".jpg";
+    var bot4Path = "static/" + document.getElementById("bot4").innerText + ".jpg";
+    var bot5Path = "static/" + document.getElementById("bot5").innerText + ".jpg";
+    var foot1Path = "static/" + document.getElementById("foot1").innerText + ".jpg";
+    var foot2Path = "static/" + document.getElementById("foot2").innerText + ".jpg";
+    var foot3Path = "static/" + document.getElementById("foot3").innerText + ".jpg";
+    var foot4Path = "static/" + document.getElementById("foot4").innerText + ".jpg";
+    var foot5Path = "static/" + document.getElementById("foot5").innerText + ".jpg";
+
+    
+
+    function display_image(src, width, height, alt ,placeholder) {
+
+      
+        var a = document.createElement("img");
+        a.src = src;
+        a.width = width;
+        a.height = height;
+        a.alt = alt;
+        document.getElementById(placeholder).appendChild(a);
+  
+    
+    }
+    
+    display_image(top1Path, 200, 200, 'top1', "displayTop1");
+    display_image(bot1Path, 200, 200, 'bot1', "displayBottom1");
+    display_image(foot1Path, 200, 200, 'foot1', "displayFoot1");
+
+    display_image(top2Path, 200, 200, 'top2', "displayTop2");
+    display_image(bot2Path, 200, 200, 'bot2', "displayBottom2");
+    display_image(foot2Path, 200, 200, 'foot2', "displayFoot2");
+    
+    display_image(top3Path, 200, 200, 'top3', "displayTop3");
+    display_image(bot3Path, 200, 200, 'bot3', "displayBottom3");
+    display_image(foot3Path, 200, 200, 'foot3', "displayFoot3");
+
+    display_image(top4Path, 200, 200, 'top4', "displayTop4");
+    display_image(bot4Path, 200, 200, 'bot4', "displayBottom4");
+    display_image(foot4Path, 200, 200, 'foot4', "displayFoot4");
+
+    display_image(top5Path, 200, 200, 'top5', "displayTop5");
+    display_image(bot5Path, 200, 200, 'bot5', "displayBottom5");
+    display_image(foot5Path, 200, 200, 'foot5', "displayFoot5");
+
+    function test(){
+      document.writeln(document.getElementById('combo').value)
+      
+    }
+  </script>
+
+</body>
+</html>

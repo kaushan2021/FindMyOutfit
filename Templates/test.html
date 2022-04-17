@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .column {
+          float: left;
+          width:20%;
+        }
+        
+        /* Clear floats after the columns */
+        .row2:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 1180px) {
+          .column {
+            width: 100%;
+          }
+        }
+        .center {
+          position: absolute;
+          
+          left: 4%;
+          
+        }
+        
+        
+        
+        
+        /* Import Google Font - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+        body{
+          background: #4285f4 !important;
+        }
+        
+        .hide{
+          display:none;  
+        }
+        
+        .wrapper{
+          background: #f6f6f6;
+          width: 320px;
+          border-radius: 10px;
+          box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+        
+          
+          margin: 85px auto 0;
+        }
+        </style>
+        
+        <!-- Custom font-->
+        <link rel="stylesheet" href="fonts/stylesheet.e9dc714d.css">
+        <!-- Swiper-->
+        <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/swiper/swiper-bundle.min.css">
+        <!-- AOS - AnimationOnScroll-->
+        <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/aos/aos.css">
+        <!-- Custom Scrollbar-->
+        <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+        <!-- Theme stylesheet-->
+        <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/style.default.7d4baeb2.css" id="theme-stylesheet">
+        <!-- Custom stylesheet - for your changes-->
+        <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/custom.0a822280.css">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/img/favicon.png">
+        <!-- FontAwesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+        
+        <!-- Iconscout Link For Icons -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        </head>
+<body>
+    <header class="header header-absolute"> 
+    
+        <!-- Top Bar End-->
+        <nav class="navbar navbar-expand-lg bg-transparent border-0 shadow-0 navbar-light px-lg-5 "><a class="navbar-brand" href="index.html"></a>
+          
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="svg-icon navbar-icon">
+              <use xlink:href="#menu-hamburger-1"> </use>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mt-3 mt-lg-0">
+              <a class="nav-link dropdown-toggle" id="homeDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                
+              
+              <a class="nav-link dropdown-toggle" id="shopDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Additional Info</a>
+            
+            </ul>
+            
+          </div>
+        </nav>
+      </header>
+<div class="column">
+<div class="wrapper">
+    <br><br>
+    <br>
+    <br>
+    <p id="demo"></p>
+    <form action="http://127.0.0.1:5000/view" method="post">
+        <div class="Outfit1">
+          
+          <input type="hidden" class="form-control" name="Top1" id="Top1" aria-describedby="emailHelp" placeholder="Top1">
+        
+          <input type="hidden" class="form-control"   name="Bottom1" id="Bottom1" placeholder="Bottom1">
+        
+          <input type="hidden" class="form-control"  name="Foot1" id="Foot1" placeholder="Foot1">
+
+          <input type="hidden" class="form-control" name="TopName1" id="TopName1" aria-describedby="emailHelp" placeholder="TopName1">
+        
+          <input type="hidden" class="form-control"   name="BottomName1" id="BottomName1" placeholder="BottomName1">
+        
+          <input type="hidden" class="form-control"  name="FootName1" id="FootName1" placeholder="FootName1">
+        </div>
+      
+        <br><br>
+        
+            
+              <button type="submit" class="btn btn-dark">View and Rate</button>
+            
+          
+      </form>
+    
+</div></div>
+<div class="column"><div class="wrapper"><br><br></div></div>
+<div class="column"><div class="wrapper"><br><br></div></div>
+<div class="column"><div class="wrapper"><br><br></div></div>
+<div class="column"><div class="wrapper"><br><br></div></div>
+
+
+<script>
+function display_image(src, width, height, alt) {
+    var a = document.createElement("img");
+    a.src = src;
+    a.width = width;
+    a.height = height;
+    a.alt = alt;
+    document.getElementById("demo").appendChild(a);
+}
+display_image('JavaScript.jpg', 
+                 276, 
+                 110, 
+                 'JavaScriptImage');
+
+display_image('JavaScript.jpg', 
+                276, 
+                110, 
+                'JavaScriptImage');
+                 
+</script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.column {
+  float: left;
+  width:20%;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1180px) {
+  .column {
+    width: 100%;
+  }
+}
+.center {
+  position: absolute;
+  
+  left: 4%;
+  
+}
+
+
+
+
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #000000 !important;
+}
+::selection{
+  color: #d3ad7f;
+  background: #000000;
+}
+
+.select-btn1, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn1 i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+
+.select-btn1{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.select-btn2, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn2 i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+
+.select-btn2{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.select-btn3, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn3 i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+
+.select-btn3{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.select-btn4, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn4 i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+
+.select-btn4{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.select-btn5, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn5 i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+
+.select-btn5{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.content{
+  display: none;
+  padding: 20px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+.wrapper1{
+  width: 320px;
+  margin: 85px auto 0;
+}
+.wrapper1.active1 .select-btn1 i{
+  transform: rotate(-180deg);
+}
+.wrapper1.active1 .content{
+  display: block;
+}
+
+.wrapper2{
+  width: 320px;
+  margin: 85px auto 0;
+}
+.wrapper2.active2 .select-btn2 i{
+  transform: rotate(-180deg);
+}
+.wrapper2.active2 .content{
+  display: block;
+}
+
+
+.wrapper4{
+  width: 320px;
+  margin: 85px auto 0;
+}
+.wrapper4.active4 .select-btn4 i{
+  transform: rotate(-180deg);
+}
+.wrapper4.active4 .content{
+  display: block;
+}
+
+.wrapper5{
+  width: 320px;
+  margin: 85px auto 0;
+}
+.wrapper5.active5 .select-btn5 i{
+  transform: rotate(-180deg);
+}
+.wrapper5.active5 .content{
+  display: block;
+}
+
+.wrapper3{
+  width: 320px;
+  margin: 85px auto 0;
+}
+.wrapper3.active3 .select-btn3 i{
+  transform: rotate(-180deg);
+}
+.wrapper3.active3 .content{
+  display: block;
+}
+
+
+.content .search{
+  position: relative;
+}
+.search i{
+  top: 50%;
+  left: 15px;
+  color: #999;
+  font-size: 20px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+
+
+.search input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 0 20px 0 43px;
+  border: 1px solid #B3B3B3;
+}
+.search input:focus{
+  padding-left: 42px;
+  border: 2px solid #000000;
+}
+.search input::placeholder{
+  color: #bfbfbf;
+}
+
+
+.content .options{
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+.options::-webkit-scrollbar{
+  width: 7px;
+}
+.options::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb:hover{
+  background: #b3b3b3;
+}
+.options li{
+  height: 50px;
+  padding: 0 13px;
+  font-size: 21px;
+}
+.options li:hover, li.selected{
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+</style>
+
+<!-- Custom font-->
+<link rel="stylesheet" href="fonts/stylesheet.e9dc714d.css">
+<!-- Swiper-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/swiper/swiper-bundle.min.css">
+<!-- AOS - AnimationOnScroll-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/aos/aos.css">
+<!-- Custom Scrollbar-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+<!-- Theme stylesheet-->
+<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/style.default.7d4baeb2.css" id="theme-stylesheet"> -->
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/custom.0a822280.css">
+<!-- Favicon-->
+<link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/img/favicon.png">
+<!-- FontAwesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+<!-- Iconscout Link For Icons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- navbar-->
+    <header class="header">
+
+      <a href="#" class="logo">
+          <img src="static/images/logo.png" alt="">
+      </a>
+  
+      <nav class="navbar">
+          <a href="/home">home</a>
+          <a href="/home#products1">Top Outfits</a>
+          
+          
+      </nav>
+  
+      <div class="icons">
+          
+          <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+  
+      
+    </header>
+      <br><br>
+
+      <div class="column">
+        <div class="wrapper4">
+            <h1 style="color:#d3ad7f">Gender</h1>
+            <div class="select-btn4">
+              <span>Select Gender</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                
+              
+                <input spellcheck="false" type="hidden">
+              </div>
+              <ul class="options"></ul>
+            </div>
+          </div>
+          
+          
+      
+          
+    </div>
+
+    <div class="column">
+      <div class="wrapper5">
+          <h1 style="color:#d3ad7f">Age</h1>
+          <div class="select-btn5">
+            <span>Select Age</span>
+            <i class="uil uil-angle-down"></i>
+          </div>
+          <div class="content">
+            <div class="search">
+              
+              <input spellcheck="false" type="hidden">
+            </div>
+            <ul class="options"></ul>
+          </div>
+        </div>
+        
+        
+    
+        
+  </div>
+
+      <div class="row2">
+        <div class="column">
+            <div class="wrapper1">
+                <h1 style="color:#d3ad7f">Dress Code</h1>
+                <div class="select-btn1">
+                  <span>Select Dress Code</span>
+                  <i class="uil uil-angle-down"></i>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    
+                  
+                    <input spellcheck="false" type="hidden">
+                  </div>
+                  
+                  <ul class="options"></ul>
+                </div>
+              </div>
+              
+              
+          
+              
+        </div>
+        <div class="column">
+            <div class="wrapper2">
+                <h1 style="color:#d3ad7f">Skin Tone</h1>
+                <div class="select-btn2">
+                  <span>Select Skin Tone</span>
+                  <i class="uil uil-angle-down"></i>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    
+                  
+                    <input spellcheck="false" type="hidden">
+                  </div>
+                  <ul class="options"></ul>
+                </div>
+              </div>
+              
+              
+          
+              
+        </div>
+        <div class="column">
+            <div class="wrapper3">
+                <h1 style="color:#d3ad7f">Season</h1>
+                <div class="select-btn3">
+                  <span>Select Season</span>
+                  <i class="uil uil-angle-down"></i>
+                </div>
+                <div class="content">
+                  <div class="search">
+                    
+                  
+                    <input spellcheck="false" type="hidden">
+                  </div>
+                  <ul class="options"></ul>
+                </div>
+              </div>
+              
+              
+              
+        </div>
+        
+        
+      </div>
+
+      <form action="http://127.0.0.1:5000/result" method="post">
+        
+          
+          <input type="hidden" class="form-control" name="age" id="age" aria-describedby="emailHelp" placeholder="Enter age">
+        
+          
+          <input type="hidden" class="form-control"   name="gender" id="gender" placeholder="gender">
+        
+          
+          <input type="hidden" class="form-control"  name="dresscode" id="dresscode" placeholder="dresscode">
+        
+          
+          <input type="hidden" class="form-control"  name="season" id="season" placeholder="season">
+        
+          
+          <input type="hidden" class="form-control"  name="skintone" id="skintone" placeholder="skintone">
+        
+        
+        <br><br>
+      <div class="row2">
+        <div class="column">
+          <div class="center">
+            <button type="submit" class="btn btn-dark">Proceed</button>
+          </div>
+        </div>
+      </div>
+      </form>
+        
+      
+<script>
+
+const wrapper4 = document.querySelector(".wrapper4"),
+selectBtn4 = wrapper4.querySelector(".select-btn4"),
+searchInp4 = wrapper4.querySelector("input4"),
+options4 = wrapper4.querySelector(".options");
+
+let Gender = ["Male", "Female"];
+
+function addGender(selectedGender) {
+    options4.innerHTML = "";
+    Gender.forEach(DressCode => {
+        let isSelected4 = DressCode == selectedGender ? "selected" : "";
+        let li4 = `<li onclick="updateGender(this)" class="${isSelected4}">${DressCode}</li>`;
+        options4.insertAdjacentHTML("beforeend", li4);
+    });
+}
+addGender();
+
+function updateGender(selectedLi4) {
+    
+    addGender(selectedLi4.innerText);
+    wrapper4.classList.remove("active4");
+    selectBtn4.firstElementChild.innerText = selectedLi4.innerText;
+    document.getElementById("gender").value = selectedLi4.innerText;
+}
+
+selectBtn4.addEventListener("click", () => wrapper4.classList.toggle("active4"));
+
+
+
+const wrapper5 = document.querySelector(".wrapper5"),
+selectBtn5 = wrapper5.querySelector(".select-btn5"),
+searchInp5 = wrapper5.querySelector("input5"),
+options5 = wrapper5.querySelector(".options");
+
+let Age = ["6", "7", "8", "9", "10", "11","12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100",];
+
+function addAge(selectedAge) {
+    options5.innerHTML = "";
+    Age.forEach(Age => {
+        let isSelected5 = Age == selectedAge ? "selected" : "";
+        let li5 = `<li onclick="updateAge(this)" class="${isSelected5}">${Age}</li>`;
+        options5.insertAdjacentHTML("beforeend", li5);
+    });
+}
+addAge();
+
+function updateAge(selectedLi5) {
+    
+    addAge(selectedLi5.innerText);
+    wrapper5.classList.remove("active5");
+    selectBtn5.firstElementChild.innerText = selectedLi5.innerText;
+    document.getElementById("age").value = selectedLi5.innerText;
+}
+
+selectBtn5.addEventListener("click", () => wrapper5.classList.toggle("active5"));
+
+
+
+const wrapper1 = document.querySelector(".wrapper1"),
+selectBtn1 = wrapper1.querySelector(".select-btn1"),
+searchInp1 = wrapper1.querySelector("input1"),
+options1 = wrapper1.querySelector(".options");
+
+let DressCode = ["Casual", "Sports", "Formal"];
+
+function addDressCode(selectedDressCode) {
+    options1.innerHTML = "";
+    DressCode.forEach(DressCode => {
+        let isSelected1 = DressCode == selectedDressCode ? "selected" : "";
+        let li1 = `<li onclick="updateDressCode(this)" class="${isSelected1}">${DressCode}</li>`;
+        options1.insertAdjacentHTML("beforeend", li1);
+    });
+}
+addDressCode();
+
+function updateDressCode(selectedLi1) {
+    
+    addDressCode(selectedLi1.innerText);
+    wrapper1.classList.remove("active1");
+    selectBtn1.firstElementChild.innerText = selectedLi1.innerText;
+    document.getElementById("dresscode").value = selectedLi1.innerText;
+}
+
+selectBtn1.addEventListener("click", () => wrapper1.classList.toggle("active1"));
+
+
+
+const wrapper2 = document.querySelector(".wrapper2"),
+selectBtn2 = wrapper2.querySelector(".select-btn2"),
+searchInp2 = wrapper2.querySelector("input2"),
+options2 = wrapper2.querySelector(".options");
+
+let SkinTone = ["Any", "Porcelain", "Ivory", "Warm Ivory", "Sand", "Beige", "Warm Beige", "Natural", "Honey", "Golden", "Almond", "Chestnut", "Espresso"];
+
+function addSkinTone(selectedSkinTone) {
+    options2.innerHTML = "";
+    SkinTone.forEach(SkinTone => {
+        let isSelected2 = SkinTone == selectedSkinTone ? "selected" : "";
+        let li2 = `<li onclick="updateSkinTone(this)" class="${isSelected2}">${SkinTone}</li>`;
+        options2.insertAdjacentHTML("beforeend", li2);
+    });
+}
+addSkinTone();
+
+function updateSkinTone(selectedLi2) {
+    
+    addSkinTone(selectedLi2.innerText);
+    wrapper2.classList.remove("active2");
+    selectBtn2.firstElementChild.innerText = selectedLi2.innerText;
+    document.getElementById("skintone").value = selectedLi2.innerText;
+}
+
+selectBtn2.addEventListener("click", () => wrapper2.classList.toggle("active2"));
+
+
+const wrapper3 = document.querySelector(".wrapper3"),
+selectBtn3 = wrapper3.querySelector(".select-btn3"),
+searchInp3 = wrapper3.querySelector("input3"),
+options3 = wrapper3.querySelector(".options");
+
+let Season = ["Any", "Summer", "Autumn", "Spring", "Winter"];
+
+function addSeason(selectedSeason) {
+    options3.innerHTML = "";
+    Season.forEach(Season => {
+        let isSelected3 = Season == selectedSeason ? "selected" : "";
+        let li3 = `<li onclick="updateSeason(this)" class="${isSelected3}">${Season}</li>`;
+        options3.insertAdjacentHTML("beforeend", li3);
+    });
+}
+addSeason();
+
+function updateSeason(selectedLi3) {
+ 
+    addSeason(selectedLi3.innerText);
+    wrapper3.classList.remove("active3");
+    selectBtn3.firstElementChild.innerText = selectedLi3.innerText;
+    document.getElementById("season").value = selectedLi3.innerText;
+}
+
+selectBtn3.addEventListener("click", () => wrapper3.classList.toggle("active3"));
+
+
+
+
+
+
+</script>
+<br><br><br><br><br>
+
+<section class="footer">
+
+    
+
+  <div class="credit">Find My Outfit  | all rights reserved</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="static/js/script.js"></script>
+      
+    
+
+    
+
+</body>
+</html>

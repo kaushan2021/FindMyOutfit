@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.hide{
+  display:none;  
+}
+.column {
+  float: left;
+  width:20%;
+  
+}
+.wrapper{
+  background: #ffffff;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  margin: 85px auto 0;
+  padding: 50px;
+  
+}
+.box{
+
+width: 500px;
+margin: 40px auto 0;
+border-radius: 10px;
+box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+background-color: #ffffff;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My Outfit</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="static/images/logo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="/home">home</a>
+        
+        <a href="/question">Get Recommendations</a>
+        
+    </nav>
+
+    <div class="icons">
+        
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    
+</header>
+
+
+
+
+
+
+
+
+<!--find outfits-->
+
+<br><br><br><br><br><br><br><br>
+<section class="products" id="products">
+
+    <h1 class="heading"> Top <span>outfits</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayTop1"></div>
+            </div>
+            <div class="content">
+
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayBottom1"></div>
+            </div>
+            <div class="content">
+
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayFoot1"></div>
+            </div>
+            <div class="content">
+
+                
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="products" id="products">
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayTop2"></div>
+            </div>
+            <div class="content">
+                
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayBottom2"></div>
+            </div>
+            <div class="content">
+                
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayFoot2"></div>
+            </div>
+            <div class="content">
+                
+                
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="products" id="products">
+
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayTop3"></div>
+            </div>
+            <div class="content">
+                
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayBottom3"></div>
+            </div>
+            <div class="content">
+                
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayFoot3"></div>
+            </div>
+            <div class="content">
+                
+                
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="products" id="products">
+
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayTop4"></div>
+            </div>
+            <div class="content">
+
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayBottom4"></div>
+            </div>
+            <div class="content">
+
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayFoot4"></div>
+            </div>
+            <div class="content">
+
+                
+                
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+<section class="products" id="products">
+
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayTop5"></div>
+            </div>
+            <div class="content">
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayBottom5"></div>
+            </div>
+            <div class="content">
+                
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayFoot5"></div>
+            </div>
+            <div class="content">
+                
+                
+            </div>
+        </div>
+
+    </div>
+    <button class="btn" onclick="history.back()">Back</button>
+</section>
+
+    <div class="hide">
+        
+        <h3 id="top1">{{Dtopwear[0]}}</h3>
+        <h3 id="top2">{{Dtopwear[1]}}</h3>
+        <h3 id="top3">{{Dtopwear[2]}}</h3>
+        <h3 id="top4">{{Dtopwear[3]}}</h3>
+        <h3 id="top5">{{Dtopwear[4]}}</h3>
+ 
+
+        <h3 id="bot1">{{Dbottomwear[0]}}</h3>
+        <h3 id="bot2">{{Dbottomwear[1]}}</h3>
+        <h3 id="bot3">{{Dbottomwear[2]}}</h3>
+        <h3 id="bot4">{{Dbottomwear[3]}}</h3>
+        <h3 id="bot5">{{Dbottomwear[4]}}</h3>
+
+
+
+        <h3 id="foot1">{{Dfootwear[0]}}</h3>
+        <h3 id="foot2">{{Dfootwear[1]}}</h3>
+        <h3 id="foot3">{{Dfootwear[2]}}</h3>
+        <h3 id="foot4">{{Dfootwear[3]}}</h3>
+        <h3 id="foot5">{{Dfootwear[4]}}</h3>
+        
+      </div>
+    
+      
+      
+      
+        
+  <script>
+      function test(){
+         alert(foot5Path) 
+      }
+    
+
+
+    //display outfit images
+
+    var top1Path = "static/outfits/" + document.getElementById("top1").innerText + ".jpg";
+    var top2Path = "static/outfits/" + document.getElementById("top2").innerText + ".jpg";
+    var top3Path = "static/outfits/" + document.getElementById("top3").innerText + ".jpg";
+    var top4Path = "static/outfits/" + document.getElementById("top4").innerText + ".jpg";
+    var top5Path = "static/outfits/" + document.getElementById("top5").innerText + ".jpg";
+
+    var bot1Path = "static/outfits/" + document.getElementById("bot1").innerText + ".jpg";
+    var bot2Path = "static/outfits/" + document.getElementById("bot2").innerText + ".jpg";
+    var bot3Path = "static/outfits/" + document.getElementById("bot3").innerText + ".jpg";
+    var bot4Path = "static/outfits/" + document.getElementById("bot4").innerText + ".jpg";
+    var bot5Path = "static/outfits/" + document.getElementById("bot5").innerText + ".jpg";
+
+    var foot1Path = "static/outfits/" + document.getElementById("foot1").innerText + ".jpg";
+    var foot2Path = "static/outfits/" + document.getElementById("foot2").innerText + ".jpg";
+    var foot3Path = "static/outfits/" + document.getElementById("foot3").innerText + ".jpg";
+    var foot4Path = "static/outfits/" + document.getElementById("foot4").innerText + ".jpg";
+    var foot5Path = "static/outfits/" + document.getElementById("foot5").innerText + ".jpg";
+
+
+    
+
+    function display_image(src, width, height, alt ,placeholder) {
+
+      
+        var a = document.createElement("img");
+        a.src = src;
+        a.width = width;
+        a.height = height;
+        a.alt = alt;
+        document.getElementById(placeholder).appendChild(a);
+  
+    
+    }
+    
+    display_image(top1Path, 200, 200, 'top1', "displayTop1");
+    display_image(bot1Path, 150, 300, 'bot1', "displayBottom1");
+    display_image(foot1Path, 200, 200, 'foot1', "displayFoot1");
+
+    display_image(top2Path, 200, 200, 'top2', "displayTop2");
+    display_image(bot2Path, 150, 300, 'bot2', "displayBottom2");
+    display_image(foot2Path, 200, 200, 'foot2', "displayFoot2");
+    
+    display_image(top3Path, 200, 200, 'top3', "displayTop3");
+    display_image(bot3Path, 150, 300, 'bot3', "displayBottom3");
+    display_image(foot3Path, 200, 200, 'foot3', "displayFoot3");
+
+    display_image(top4Path, 200, 200, 'top4', "displayTop4");
+    display_image(bot4Path, 150, 300, 'bot4', "displayBottom4");
+    display_image(foot4Path, 200, 200, 'foot4', "displayFoot4");
+
+    display_image(top5Path, 200, 200, 'top5', "displayTop5");
+    display_image(bot5Path, 150, 300, 'bot5', "displayBottom5");
+    display_image(foot5Path, 200, 200, 'foot5', "displayFoot5");
+
+  </script>
+
+
+
+    <br><br><br>
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    
+
+    <div class="credit">Find My Outfit  | all rights reserved</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="static/js/script.js"></script>
+
+</body>
+</html>

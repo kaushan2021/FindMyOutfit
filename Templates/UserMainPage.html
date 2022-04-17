@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.hide{
+  display:none;  
+}
+.column {
+  float: left;
+  width:20%;
+  
+}
+.wrapper{
+  background: #ffffff;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  margin: 85px auto 0;
+  padding: 50px;
+  
+}
+.box{
+
+    width: 500px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My Outfit</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+<br><br>
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="static/images/logo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="/home">home</a>
+        <a href="#products1">Top Outfits</a>
+        <a href="#products2">Recommended Outfits</a>
+        
+    </nav>
+
+    <div class="icons">
+        
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    
+</header>
+
+
+
+
+
+
+
+
+<!--find outfits-->
+<section class="home2" id="home2">
+    
+    
+
+    <div class="content">
+        
+        <h1 class="heading"> {{message}} <span>{{loginName}}</span> </h1>
+        <a href="/question" class="btn">get recommendations now</a>
+    </div>
+
+</section>
+
+<section class="products" id="products1">
+
+    <h1 class="heading"> Top <span>outfits</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayTop1"></div>
+            </div>
+            <div class="content">
+                <h3 style="color:#d3ad7f">Top Wear</h3>    
+                <div class="stars">
+                    <i id='rating1' class="fas fa-star"></i>
+                    <i id='rating2' class="fas fa-star"></i>
+                    <i id='rating3' class="fas fa-star"></i>
+                    <i id='rating4' class="fas fa-star"></i>
+                    <i id='rating5' class="fas fa-star-half-alt"></i>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayBottom1"></div>
+            </div>
+            <div class="content">
+                <h3 style="color:#d3ad7f">Bottom Wear</h3>    
+                <div class="stars">
+                    <i id='rating6' class="fas fa-star"></i>
+                    <i id='rating7' class="fas fa-star"></i>
+                    <i id='rating8' class="fas fa-star"></i>
+                    <i id='rating9' class="fas fa-star"></i>
+                    <i id='rating10' class="fas fa-star-half-alt"></i>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                
+                <div id="displayFoot1"></div>
+            </div>
+            <div class="content">
+                <h3 style="color:#d3ad7f">Foot Wear</h3>    
+                <div class="stars">
+                    <i id='rating11' class="fas fa-star"></i>
+                    <i id='rating12' class="fas fa-star"></i>
+                    <i id='rating13' class="fas fa-star"></i>
+                    <i id='rating14' class="fas fa-star"></i>
+                    <i id='rating15' class="fas fa-star-half-alt"></i>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <a href="/viewmoretop" class="btn">view more</a>
+</section>
+
+    <section class="products" id="products2">
+
+        <h1 class="heading"> You May <span>Like</span> </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                
+                <div class="image">
+                    
+                </div>
+                <div class="content">
+                    <h3 style="color:#d3ad7f">Top Wear</h3>
+                    <div class="stars">
+                        <i id='rating16' class="fas fa-star"></i>
+                        <i id='rating17' class="fas fa-star"></i>
+                        <i id='rating18' class="fas fa-star"></i>
+                        <i id='rating19' class="fas fa-star"></i>
+                        <i id='rating20' class="fas fa-star-half-alt"></i>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <div class="box">
+                
+                <div class="image">
+                    
+                </div>
+                <div class="content">
+                    <h3 style="color:#d3ad7f">Bottom Wear</h3>
+                    <div class="stars">
+                        <i id='rating21' class="fas fa-star"></i>
+                        <i id='rating22' class="fas fa-star"></i>
+                        <i id='rating23' class="fas fa-star"></i>
+                        <i id='rating24' class="fas fa-star"></i>
+                        <i id='rating25' class=""></i>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <div class="box">
+                
+                <div class="image">
+                    
+                </div>
+                <div class="content">
+                    <h3 style="color:#d3ad7f">Foot Wear</h3>
+                    <div class="stars">
+                        <i id='rating26' class="fas fa-star"></i>
+                        <i id='rating27' class="fas fa-star"></i>
+                        <i id='rating28' class="fas fa-star"></i>
+                        <i id='rating29' class="fas fa-star"></i>
+                        <i id='rating30' class=""></i>
+                    </div>
+                    
+                </div>
+            </div>
+    
+        </div>
+
+    </section>
+
+    <div class="hide">
+        
+        <h3 id="top1">{{Dtopwear[0]}}</h3>
+        <h3 id="top2">{{Dtopwear[1]}}</h3>
+        <h3 id="top3">{{Dtopwear[2]}}</h3>
+        
+ 
+
+        <h3 id="bot1">{{Dbottomwear[0]}}</h3>
+        <h3 id="bot2">{{Dbottomwear[1]}}</h3>
+        <h3 id="bot3">{{Dbottomwear[2]}}</h3>
+
+
+        <h3 id="foot1">{{Dfootwear[0]}}</h3>
+        <h3 id="foot2">{{Dfootwear[1]}}</h3>
+        <h3 id="foot3">{{Dfootwear[2]}}</h3>
+
+        <h3 id="Drating1">{{DRating[0]}}</h3>
+        <h3 id="Drating2">{{DRating[1]}}</h3>
+        <h3 id="Drating3">{{DRating[2]}}</h3>
+ 
+
+        
+
+        
+      </div>
+    
+      
+      
+      
+        
+  <script>
+    
+
+
+    //display outfit images
+
+    var top1Path = "static/outfits/" + document.getElementById("top1").innerText + ".jpg";
+    var top2Path = "static/outfits/" + document.getElementById("top2").innerText + ".jpg";
+    var top3Path = "static/outfits/" + document.getElementById("top3").innerText + ".jpg";
+
+    var bot1Path = "static/outfits/" + document.getElementById("bot1").innerText + ".jpg";
+    var bot2Path = "static/outfits/" + document.getElementById("bot2").innerText + ".jpg";
+    var bot3Path = "static/outfits/" + document.getElementById("bot3").innerText + ".jpg";
+
+    var foot1Path = "static/outfits/" + document.getElementById("foot1").innerText + ".jpg";
+    var foot2Path = "static/outfits/" + document.getElementById("foot2").innerText + ".jpg";
+    var foot3Path = "static/outfits/" + document.getElementById("foot3").innerText + ".jpg";
+
+    var rating1 = document.getElementById("rating1").innerText ;
+    var rating2 = document.getElementById("rating2").innerText ;
+    var rating3 = document.getElementById("rating3").innerText ;
+
+    //display rating
+    if (parseInt(rating1) < 2){
+        document.getElementById("rating1").className = "fas fa-star" ;
+        document.getElementById("rating2").className = "" ;
+        document.getElementById("rating3").className = "" ;
+        document.getElementById("rating4").className = "" ;
+        document.getElementById("rating5").className = "" ;
+    }
+    else if (parseInt(rating1) < 3){
+        document.getElementById("rating1").className = "fas fa-star" ;
+        document.getElementById("rating2").className = "fas fa-star" ;
+        document.getElementById("rating3").className = "" ;
+        document.getElementById("rating4").className = "" ;
+        document.getElementById("rating5").className = "" ;
+    }
+    else if (parseInt(rating1) < 4){
+        document.getElementById("rating1").className = "fas fa-star" ;
+        document.getElementById("rating2").className = "fas fa-star" ;
+        document.getElementById("rating3").className = "fas fa-star" ;
+        document.getElementById("rating4").className = "" ;
+        document.getElementById("rating5").className = "" ;
+    }
+    else if (parseInt(rating1) < 5){
+        document.getElementById("rating1").className = "fas fa-star" ;
+        document.getElementById("rating2").className = "fas fa-star" ;
+        document.getElementById("rating3").className = "fas fa-star" ;
+        document.getElementById("rating4").className = "fas fa-star" ;
+        document.getElementById("rating5").className = "" ;
+    }
+    else if (parseInt(rating1) < 6){
+        document.getElementById("rating1").className = "fas fa-star" ;
+        document.getElementById("rating2").className = "fas fa-star" ;
+        document.getElementById("rating3").className = "fas fa-star" ;
+        document.getElementById("rating4").className = "fas fa-star" ;
+        document.getElementById("rating5").className = "fas fa-star" ;
+        alert1 = document.getElementById("rating5").className; 
+    }
+
+    if (parseInt(rating1) < 2){
+        document.getElementById("rating6").className = "fas fa-star" ;
+        document.getElementById("rating7").className = "" ;
+        document.getElementById("rating8").className = "" ;
+        document.getElementById("rating9").className = "" ;
+        document.getElementById("rating10").className = "" ;
+    }
+    else if (parseInt(rating1) < 3){
+        document.getElementById("rating6").className = "fas fa-star" ;
+        document.getElementById("rating7").className = "fas fa-star" ;
+        document.getElementById("rating8").className = "" ;
+        document.getElementById("rating9").className = "" ;
+        document.getElementById("rating10").className = "" ;
+    }
+    else if (parseInt(rating1) < 4){
+        document.getElementById("rating6").className = "fas fa-star" ;
+        document.getElementById("rating7").className = "fas fa-star" ;
+        document.getElementById("rating8").className = "fas fa-star" ;
+        document.getElementById("rating9").className = "" ;
+        document.getElementById("rating10").className = "" ;
+    }
+    else if (parseInt(rating1) < 5){
+        document.getElementById("rating6").className = "fas fa-star" ;
+        document.getElementById("rating7").className = "fas fa-star" ;
+        document.getElementById("rating8").className = "fas fa-star" ;
+        document.getElementById("rating9").className = "fas fa-star" ;
+        document.getElementById("rating10").className = "" ;
+    }
+    else if (parseInt(rating1) < 6){
+        document.getElementById("rating6").className = "fas fa-star" ;
+        document.getElementById("rating7").className = "fas fa-star" ;
+        document.getElementById("rating8").className = "fas fa-star" ;
+        document.getElementById("rating9").className = "fas fa-star" ;
+        document.getElementById("rating10").className = "fas fa-star" ;
+    }
+
+    if (parseInt(rating1) < 2){
+        document.getElementById("rating11").className = "fas fa-star" ;
+        document.getElementById("rating12").className = "" ;
+        document.getElementById("rating13").className = "" ;
+        document.getElementById("rating14").className = "" ;
+        document.getElementById("rating15").className = "" ;
+    }
+    else if (parseInt(rating1) < 3){
+        document.getElementById("rating11").className = "fas fa-star" ;
+        document.getElementById("rating12").className = "fas fa-star" ;
+        document.getElementById("rating13").className = "" ;
+        document.getElementById("rating14").className = "" ;
+        document.getElementById("rating15").className = "" ;
+    }
+    else if (parseInt(rating1) < 4){
+        document.getElementById("rating11").className = "fas fa-star" ;
+        document.getElementById("rating12").className = "fas fa-star" ;
+        document.getElementById("rating13").className = "fas fa-star" ;
+        document.getElementById("rating14").className = "" ;
+        document.getElementById("rating15").className = "" ;
+    }
+    else if (parseInt(rating1) < 5){
+        document.getElementById("rating11").className = "fas fa-star" ;
+        document.getElementById("rating12").className = "fas fa-star" ;
+        document.getElementById("rating13").className = "fas fa-star" ;
+        document.getElementById("rating14").className = "fas fa-star" ;
+        document.getElementById("rating15").className = "" ;
+    }
+    else if (parseInt(rating1) < 6){
+        document.getElementById("rating11").className = "fas fa-star" ;
+        document.getElementById("rating12").className = "fas fa-star" ;
+        document.getElementById("rating13").className = "fas fa-star" ;
+        document.getElementById("rating14").className = "fas fa-star" ;
+        document.getElementById("rating15").className = "fas fa-star" ;
+    }
+    
+
+
+    
+
+    function display_image(src, width, height, alt ,placeholder) {
+
+      
+        var a = document.createElement("img");
+        a.src = src;
+        a.width = width;
+        a.height = height;
+        a.alt = alt;
+        document.getElementById(placeholder).appendChild(a);
+  
+    
+    }
+    
+    display_image(top1Path, 200, 200, 'top1', "displayTop1");
+    display_image(bot1Path, 150, 300, 'bot1', "displayBottom1");
+    display_image(foot1Path, 200, 200, 'foot1', "displayFoot1");
+
+    display_image(top2Path, 200, 200, 'top2', "displayTop2");
+    display_image(bot2Path, 150, 300, 'bot2', "displayBottom2");
+    display_image(foot2Path, 200, 200, 'foot2', "displayFoot2");
+    
+    display_image(top3Path, 200, 200, 'top3', "displayTop3");
+    display_image(bot3Path, 150, 300, 'bot3', "displayBottom3");
+    display_image(foot3Path, 200, 200, 'foot3', "displayFoot3");
+
+  </script>
+
+
+
+    <br><br><br>
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    
+
+    <div class="credit">Find My Outfit  | all rights reserved</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="static/js/script.js"></script>
+
+</body>
+</html>

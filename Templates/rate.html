@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.column {
+  float: left;
+  width:20%;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1180px) {
+  .column {
+    width: 100%;
+  }
+}
+.center {
+  position: absolute;
+  
+  left: 4%;
+  
+}
+.box1{
+
+  width: 900px;
+  margin: 40px auto 0;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+
+}
+.hide{
+  display:none;  
+}
+
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.hide{
+  display:none;  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#d3ad7f, #dfb480);
+}
+.wrapper{
+  background: #f6f6f6;
+  max-width: 360px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .content{
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .outer{
+  height: 135px;
+  width: 135px;
+  overflow: hidden;
+}
+.outer .emojis{
+  height: 500%;
+  display: flex;
+  flex-direction: column;
+}
+.outer .emojis li{
+  height: 20%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+.outer li img{
+  height: 100%;
+  width: 100%;
+}
+#star-2:checked ~ .content .emojis .slideImg{
+  margin-top: -135px;
+}
+#star-3:checked ~ .content .emojis .slideImg{
+  margin-top: -270px;
+}
+#star-4:checked ~ .content .emojis .slideImg{
+  margin-top: -405px;
+}
+#star-5:checked ~ .content .emojis .slideImg{
+  margin-top: -540px;
+}
+.wrapper .stars{
+  margin-top: 30px;
+}
+.stars label{
+  font-size: 30px;
+  margin: 0 3px;
+  color: #ccc;
+}
+#star-1:hover ~ .content .stars .star-1,
+#star-1:checked ~ .content .stars .star-1,
+
+#star-2:hover ~ .content .stars .star-1,
+#star-2:hover ~ .content .stars .star-2,
+#star-2:checked ~ .content .stars .star-1,
+#star-2:checked ~ .content .stars .star-2,
+
+#star-3:hover ~ .content .stars .star-1,
+#star-3:hover ~ .content .stars .star-2,
+#star-3:hover ~ .content .stars .star-3,
+#star-3:checked ~ .content .stars .star-1,
+#star-3:checked ~ .content .stars .star-2,
+#star-3:checked ~ .content .stars .star-3,
+
+#star-4:hover ~ .content .stars .star-1,
+#star-4:hover ~ .content .stars .star-2,
+#star-4:hover ~ .content .stars .star-3,
+#star-4:hover ~ .content .stars .star-4,
+#star-4:checked ~ .content .stars .star-1,
+#star-4:checked ~ .content .stars .star-2,
+#star-4:checked ~ .content .stars .star-3,
+#star-4:checked ~ .content .stars .star-4,
+
+#star-5:hover ~ .content .stars .star-1,
+#star-5:hover ~ .content .stars .star-2,
+#star-5:hover ~ .content .stars .star-3,
+#star-5:hover ~ .content .stars .star-4,
+#star-5:hover ~ .content .stars .star-5,
+#star-5:checked ~ .content .stars .star-1,
+#star-5:checked ~ .content .stars .star-2,
+#star-5:checked ~ .content .stars .star-3,
+#star-5:checked ~ .content .stars .star-4,
+#star-5:checked ~ .content .stars .star-5{
+  color: #d3ad7f;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+
+
+
+</style>
+
+<!-- Custom font-->
+<link rel="stylesheet" href="fonts/stylesheet.e9dc714d.css">
+<!-- Swiper-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/swiper/swiper-bundle.min.css">
+<!-- AOS - AnimationOnScroll-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/aos/aos.css">
+<!-- Custom Scrollbar-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+<!-- Theme stylesheet-->
+<!--<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/style.default.7d4baeb2.css" id="theme-stylesheet"> -->
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/css/custom.0a822280.css">
+<!-- Favicon-->
+<link rel="shortcut icon" href="https://d19m59y37dris4.cloudfront.net/varkala/2-0-1/img/favicon.png">
+<!-- FontAwesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+<!-- Iconscout Link For Icons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+<link rel="stylesheet" href="static/css/style.css">
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <!-- navbar-->
+    <header class="header">
+
+      <a href="#" class="logo">
+          <img src="static/images/logo.png" alt="">
+      </a>
+  
+      <nav class="navbar">
+          <a href="/home">home</a>
+          <a href="/home#products1">Top Outfits</a>
+          <a href="/home#products2">Recommended Outfits</a>
+          
+      </nav>
+  
+      <div class="icons">
+          
+          <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+  
+      
+    </header>
+      <br><br>
+
+      
+
+      <section class="products" id="products">
+        <div class="box">
+        <div class="wrapper">
+          <br>
+          <h2 style="color:#d3ad7f">Rate for : {{comboName}}</h2>
+            <input type="radio" name="rate" id="star-1">
+            <input type="radio" name="rate" id="star-2">
+            <input type="radio" name="rate" id="star-3">
+            <input type="radio" name="rate" id="star-4">
+            <input type="radio" name="rate" id="star-5">
+            <div class="content">
+              <div class="outer">
+                <div class="emojis">
+                  <li class="slideImg"><img src="static/emojis/emoji-1.png" alt=""></li>
+                  <li><img src="static/emojis/emoji-2.png" alt=""></li>
+                  <li><img src="static/emojis/emoji-3.png" alt=""></li>
+                  <li><img src="static/emojis/emoji-4.png" alt=""></li>
+                  <li><img src="static/emojis/emoji-5.png" alt=""></li>
+                </div>
+              </div>
+              <div class="stars">
+                <label for="star-1" class="star-1 fas fa-star"></label>
+                <label for="star-2" class="star-2 fas fa-star"></label>
+                <label for="star-3" class="star-3 fas fa-star"></label>
+                <label for="star-4" class="star-4 fas fa-star"></label>
+                <label for="star-5" class="star-5 fas fa-star"></label>
+              </div>
+            </div>
+            
+            
+          
+
+            
+
+
+            <form action="http://127.0.0.1:5000//getrating" method="POST">
+                <input class="numb" type="hidden" name="rating" id="rating" placeholder="rating">
+                <br>
+                <button onclick="getRating()"  type="submit" class="btn">Confirm Rating</button>
+            </form>
+          </div>
+          </div>
+          <section>
+            
+          <section class="footer">
+
+    
+
+            <div class="credit">Find My Outfit  | all rights reserved</div>
+        
+        </section>
+        
+        <!-- footer1 section ends -->
+
+    
+  <script>
+
+    function getRating(){
+      var radios = document.getElementsByTagName('input');
+      var value;
+      //check whic radio is selected
+      if (radios[0].checked) {
+           value = 1;       
+    }
+      else if (radios[1].checked) {
+           value = 2;       
+    }
+      else if (radios[2].checked) {
+           value = 3;       
+    }
+      else if (radios[3].checked) {
+           value = 4;       
+    }
+      else if (radios[4].checked) {
+           value = 5;       
+    }
+    radios[5].value = value;
+    }
+
+    
+  </script> 
+  
+  
+  
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="static/js/script.js"></script>
+
+</body>
+</html>
